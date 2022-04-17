@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "name": "Parvez Rahman",
+    "name": "Tom Hanks",
     "ratings": 5,
     "img": "https://i.ibb.co/K5FZjm2/rev3.png",
 
@@ -9,7 +9,7 @@
   },
  {
     "id": 2,
-    "name": "Ruman Islam",
+    "name": "Jack",
     "ratings": 5,
     "img": "https://i.ibb.co/dchhHc8/rev2.png",
 
@@ -17,7 +17,7 @@
   },
   {
     "id": 3,
-    "name": "Jhankar Mahbub",
+    "name": "Dyto",
     "ratings": 5,
     "img": "https://i.ibb.co/Kwb5v5R/rev1.png",
 

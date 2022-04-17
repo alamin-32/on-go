@@ -1,0 +1,23 @@
+.about-me {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.about-info {
+    margin-top: 180px;
+    margin-left: 70px;
+    padding: 0 40px;
+}
+
+.h1 {
+    font-size: 50px;
+    font-weight: 600;
+    color: goldenrod;
+}
+
+.bg-img {
+    width: 480px;
+    margin-top: 50px;
+    margin-right: 60px;
+}
