@@ -2,9 +2,15 @@ import React from "react";
 import "./Footer.css";
 
 const Footer = () => {
+  const today = new Date();
+  const year = today.getFullYear();
   return (
     <div className="footer">
-      <h1>This is footer area</h1>
+      <div>
+        <h5>Created By</h5>
+        <h3>AL-Amin Hussain</h3>
+        <p>Copyright ©{year} alamin</p>
+      </div>
     </div>
   );
 };

@@ -53,6 +53,7 @@ const Login = () => {
               placeholder="Email"
               name="email"
               id=""
+              required
             />
           </div>
           <div className="input-group">
@@ -63,6 +64,7 @@ const Login = () => {
               name="password"
               placeholder="Password"
               id=""
+              required
             />
           </div>
           <input className="form-submit" type="submit" value="login" />

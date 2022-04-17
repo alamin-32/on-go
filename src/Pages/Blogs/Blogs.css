@@ -1,0 +1,20 @@
+.blogs-container {
+   padding-top: 30px;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.blog-heading {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.blogs {
+    padding: 20px;
+    text-align: left;
+
+}
+
+.blogs p {
+    font-size: 17px;
+}
