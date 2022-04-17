@@ -9,6 +9,7 @@ import "./Login.css";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  // const [error,setError]=useState("");
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
 
@@ -27,6 +28,9 @@ const Login = () => {
   if (user) {
     navigate(from, { replace: true });
   }
+  // if (error) {
+  //   setError('Insert Wrong password');
+  // }
 
   const handleCreateUser = event => {
     event.preventDefault();
