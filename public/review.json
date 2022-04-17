@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "name": "Parvez Rahman",
+    "ratings": 5,
+    "img": "",
+    
+    
+    "comment":""
+  },
+ {
+    "id": 2,
+    "name": "Ruman Islam",
+    "ratings": 5,
+    "img": "",
+
+   
+    "comment":""
+  },
+  {
+    "id": 3,
+    "name": "Jhankar Mahbub",
+    "ratings": 5,
+    "img": "",
+
+    "comment":""
+  }
+  
+]
