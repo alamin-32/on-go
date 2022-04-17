@@ -56,16 +56,7 @@ const SignUp = () => {
               placeholder="Email"
               name="email"
               id=""
-            />
-          </div>
-          <div className="input-group">
-            <label htmlFor="password">Confirm Password</label>
-            <input
-              onBlur={handleConfirmPasswordBlur}
-              type="password"
-              name="password"
-              placeholder="Password"
-              id=""
+              required
             />
           </div>
           <div className="input-group">
@@ -76,6 +67,18 @@ const SignUp = () => {
               name="password"
               placeholder="Password"
               id=""
+              required
+            />
+          </div>
+          <div className="input-group">
+            <label htmlFor="password">Confirm Password</label>
+            <input
+              onBlur={handleConfirmPasswordBlur}
+              type="password"
+              name="password"
+              placeholder="Password"
+              id=""
+              required
             />
           </div>
           <input className="form-submit" type="submit" value="Sign Up" />

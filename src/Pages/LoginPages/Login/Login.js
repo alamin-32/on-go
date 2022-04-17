@@ -3,7 +3,7 @@ import { Spinner } from "react-bootstrap";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
-import google from "../../../images/google.png";
+import GoogleLogin from "../GoogleLogin/GoogleLogin";
 import "./Login.css";
 
 const Login = () => {
@@ -11,7 +11,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
   // const [error,setError]=useState("");
   const [signInWithEmailAndPassword, user, loading, error] =
-    useSignInWithEmailAndPassword(auth);
+    useSignInWithEmailAndPassword(auth, { sendEmailVerification: true });
 
   const navigate = useNavigate();
   const location = useLocation();
@@ -80,10 +80,7 @@ const Login = () => {
           or
           <div className="or-area"></div>
         </div>
-        <button className="google-signIn">
-          <img className="google-icon" src={google} alt="" />
-          Google Sign in
-        </button>
+        <GoogleLogin></GoogleLogin>
       </div>
     </div>
   );
