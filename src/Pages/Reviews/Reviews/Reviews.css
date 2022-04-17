@@ -1,0 +1,21 @@
+.reviews-area {
+    margin: 40px 0;
+}
+
+.reviews-text {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.reviews-container {
+    align-items: center;
+    padding: 10px;
+}
+
+
+.reviews-details-container {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+}

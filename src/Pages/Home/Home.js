@@ -6,6 +6,7 @@ import caro2 from "../../images/caro2.png";
 import caro3 from "../../images/caro3.png";
 import caro4 from "../../images/caro4.png";
 import caro5 from "../../images/caro5.png";
+import Reviews from "../Reviews/Reviews/Reviews";
 
 const Home = () => {
   return (
@@ -61,6 +62,9 @@ const Home = () => {
       </div>
       <div className="service-container">
         <Services></Services>
+      </div>
+      <div className="review-container">
+        <Reviews></Reviews>
       </div>
     </div>
   );

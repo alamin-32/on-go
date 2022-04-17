@@ -1,0 +1,29 @@
+.service-details {
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.service-details img {
+    border-radius: 5px;
+}
+
+.service-area {
+    padding: 10px;
+    text-align: left;
+}
+
+.explore-btn {
+    border: none;
+    border-radius: 8px;
+    background-color: aquamarine;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+
+}
+
+.explore-more {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: black;
+}

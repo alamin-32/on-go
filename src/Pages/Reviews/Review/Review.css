@@ -1,0 +1,17 @@
+.review-details {
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.review-img {
+    margin-top: 20px;
+    width: 380px;
+    width: 100px;
+    border-radius: 50px;
+}
+
+.review-area {
+    text-align: center;
+    padding: 10px;
+    text-align: left;
+}
