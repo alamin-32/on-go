@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Button, Form } from "react-bootstrap";
 import auth from "../../../firebase.init";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { Link, useNavigate } from "react-router-dom";

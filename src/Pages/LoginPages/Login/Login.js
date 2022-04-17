@@ -3,6 +3,7 @@ import { Spinner } from "react-bootstrap";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
+import google from "../../../images/google.png";
 import "./Login.css";
 
 const Login = () => {
@@ -69,11 +70,14 @@ const Login = () => {
           </Link>
         </p>
         <div className="or">
-          <div className=""></div>
-          <p>or</p>
-          <div></div>
+          <div className="or-area"></div>
+          or
+          <div className="or-area"></div>
         </div>
-        <button className="google-signIn"> Google Sign in</button>
+        <button className="google-signIn">
+          <img className="google-icon" src={google} alt="" />
+          Google Sign in
+        </button>
       </div>
     </div>
   );

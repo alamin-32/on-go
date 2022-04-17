@@ -3,6 +3,7 @@
     display: flex;
     justify-content: center;
     margin: 0 auto;
+    margin-top: 40px;
     border-radius: 31px;
     background: #b1aaaa;
     box-shadow: inset 9px -9px 18px #8a8585,
@@ -64,7 +65,16 @@
     font-size: 20px;
 }
 
+/* .or-area {
+    background-color: black;
+    display: flex;
+    align-items: center;
+} */
+
 .google-signIn {
+    display: flex;
+    align-items: center;
+    text-align: center;
     width: 415px;
     font-size: 20px;
     font-weight: 700;
@@ -74,4 +84,10 @@
     background-color: aquamarine;
     border-radius: 5px;
     border: none;
+}
+
+.google-icon {
+    margin-left: 80px;
+    height: 60px;
+    width: 80px;
 }
