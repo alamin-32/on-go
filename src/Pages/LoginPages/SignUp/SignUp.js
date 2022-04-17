@@ -3,6 +3,7 @@ import { Button, Form } from "react-bootstrap";
 import auth from "../../../firebase.init";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { Link, useNavigate } from "react-router-dom";
+import "../Login/Login.css";
 
 const SignUp = () => {
   const [email, setEmail] = useState("");
@@ -39,51 +40,54 @@ const SignUp = () => {
     createUserWithEmailAndPassword(email, password);
   };
 
-  // if (user) {
-  //   navigate("/services");
-  // }
-
-  if (createError) {
-    console.log(createError);
+  if (user) {
+    navigate("/home");
   }
 
   return (
-    <div className="container w-50 mx-auto">
-      <h1 className="text-primary text-center mt-2">This is log in</h1>
-      <Form onSubmit={handleCreateUser}>
-        <Form.Group className="mb-3 " controlId="formBasicEmail">
-          <Form.Label>Email address</Form.Label>
-          <Form.Control
-            onBlur={handleEmailBlur}
-            type="email"
-            placeholder="Enter email"
-          />
-        </Form.Group>
-
-        <Form.Group className="mb-3" controlId="formConfirmPassword">
-          <Form.Label>Password</Form.Label>
-          <Form.Control
-            onBlur={handlePasswordBlur}
-            type="password"
-            placeholder="Password"
-          />
-        </Form.Group>
-        <p>{error}</p>
-        <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Label>Confirm Password</Form.Label>
-          <Form.Control
-            onBlur={handleConfirmPasswordBlur}
-            type="password"
-            placeholder="Confirm Password"
-          />
-        </Form.Group>
+    <div className="form-container">
+      <div>
+        <h2 className="form-title">Sign Up</h2>
+        <form onSubmit={handleCreateUser}>
+          <div className="input-group">
+            <label htmlFor="email">Email</label>
+            <input
+              onBlur={handleEmailBlur}
+              type="email"
+              placeholder="Email"
+              name="email"
+              id=""
+            />
+          </div>
+          <div className="input-group">
+            <label htmlFor="password">Confirm Password</label>
+            <input
+              onBlur={handleConfirmPasswordBlur}
+              type="password"
+              name="password"
+              placeholder="Password"
+              id=""
+            />
+          </div>
+          <div className="input-group">
+            <label htmlFor="password">Password</label>
+            <input
+              onBlur={handlePasswordBlur}
+              type="password"
+              name="password"
+              placeholder="Password"
+              id=""
+            />
+          </div>
+          <input className="form-submit" type="submit" value="Sign Up" />
+        </form>
         <p>
-          Already have an Account? <Link to="/login">Log in</Link>
+          Already Have an Account?
+          <Link className="form-link" to="/login">
+            Log in
+          </Link>
         </p>
-        <Button variant="primary" type="submit">
-          SignUp
-        </Button>
-      </Form>
+      </div>
     </div>
   );
 };

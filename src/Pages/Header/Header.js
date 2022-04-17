@@ -3,15 +3,13 @@ import { Link } from "react-router-dom";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
-import './Header.css'
+import "./Header.css";
 
 const Header = () => {
   const { user } = useAuthState(auth);
   return (
     <div className="header">
-      <Navbar
-        sticky="top"
-      >
+      <Navbar sticky="top">
         <Container>
           <Navbar.Brand as={Link} to="/">
             React-Bootstrap
@@ -26,18 +24,16 @@ const Header = () => {
                 About
               </Nav.Link>
             </Nav>
-            <Nav>
-              {user ? (
-                <button>Sign Out</button>
-              ) : (
+            {
+              user ? (
+              <button>Sign Out</button>
+            ) : (
+              <Nav>
                 <Nav.Link as={Link} to="/login">
                   Login
                 </Nav.Link>
-              )}
-              {/* <Nav.Link as={Link} to="/signUp">
-              SignUp
-            </Nav.Link> */}
-            </Nav>
+              </Nav>
+            )}
           </Navbar.Collapse>
         </Container>
       </Navbar>

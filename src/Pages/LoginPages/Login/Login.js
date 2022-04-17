@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { Button, Form, Spinner } from "react-bootstrap";
+import { Spinner } from "react-bootstrap";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
+import "./Login.css";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -35,36 +36,45 @@ const Login = () => {
     return <Spinner animation="border" />;
   }
   return (
-    <div className="container w-50 mx-auto">
-      <h1 className="text-primary text-center mt-2">This is log in</h1>
-      <Form onSubmit={handleCreateUser}>
-        <Form.Group className="mb-3 " controlId="formBasicEmail">
-          <Form.Label>Email address</Form.Label>
-          <Form.Control
-            onBlur={handleEmailBlur}
-            type="email"
-            placeholder="Enter email"
-          />
-          <Form.Text className="text-muted">
-            We'll never share your email with anyone else.
-          </Form.Text>
-        </Form.Group>
-
-        <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Label>Password</Form.Label>
-          <Form.Control
-            onBlur={handlePasswordBlur}
-            type="password"
-            placeholder="Password"
-          />
-        </Form.Group>
+    <div className="form-container">
+      <div>
+        <h2 className="form-title">Login</h2>
+        <form onSubmit={handleCreateUser}>
+          <div className="input-group">
+            <label htmlFor="email">Email</label>
+            <input
+              onBlur={handleEmailBlur}
+              type="email"
+              placeholder="Email"
+              name="email"
+              id=""
+            />
+          </div>
+          <div className="input-group">
+            <label htmlFor="password">Password</label>
+            <input
+              onBlur={handlePasswordBlur}
+              type="password"
+              name="password"
+              placeholder="Password"
+              id=""
+            />
+          </div>
+          <input className="form-submit" type="submit" value="login" />
+        </form>
         <p>
-          New to this site? <Link to="/signUp">Sign up now</Link>
+          New to this site?{" "}
+          <Link className="form-link" to="/signUp">
+            Create an Account
+          </Link>
         </p>
-        <Button variant="primary" type="submit">
-          Log in
-        </Button>
-      </Form>
+        <div className="or">
+          <div className=""></div>
+          <p>or</p>
+          <div></div>
+        </div>
+        <button className="google-signIn"> Google Sign in</button>
+      </div>
     </div>
   );
 };
