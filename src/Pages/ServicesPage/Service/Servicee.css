@@ -9,6 +9,7 @@
 
 .service-area {
     padding: 10px;
+    padding-bottom: 0px;
     text-align: left;
 }
 
@@ -18,6 +19,7 @@
     background-color: aquamarine;
     margin-bottom: 20px;
     padding: 10px 20px;
+    margin-left: 105px;
 
 }
 

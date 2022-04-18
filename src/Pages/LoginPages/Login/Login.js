@@ -1,10 +1,16 @@
 import React, { useState } from "react";
 import { Spinner } from "react-bootstrap";
-import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import {
+  useSignInWithEmailAndPassword,
+  useUpdatePassword,
+} from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
 import GoogleLogin from "../GoogleLogin/GoogleLogin";
 import "./Login.css";
+import { ToastContainer, toast } from "react-toastify";
+
+import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -12,6 +18,7 @@ const Login = () => {
   // const [error,setError]=useState("");
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth, { sendEmailVerification: true });
+  const [updatePassword, updating] = useUpdatePassword(auth);
 
   const navigate = useNavigate();
   const location = useLocation();
@@ -70,9 +77,22 @@ const Login = () => {
           <input className="form-submit" type="submit" value="login" />
         </form>
         <p>
-          New to this site?{" "}
+          New to this site?
           <Link className="form-link" to="/signUp">
             Create an Account
+          </Link>
+        </p>
+        <p>
+          Forgot Password?
+          <Link
+            onClick={async () => {
+              await updatePassword(email);
+              toast("Password Set Successfully");
+            }}
+            className="form-link"
+            to="/login"
+          >
+            Reset Now
           </Link>
         </p>
         <div className="or">
@@ -82,6 +102,7 @@ const Login = () => {
         </div>
         <GoogleLogin></GoogleLogin>
       </div>
+      <ToastContainer />
     </div>
   );
 };

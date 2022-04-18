@@ -1,6 +1,6 @@
 import React from "react";
 import { useSignInWithGoogle } from "react-firebase-hooks/auth";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
 import google from "../../../images/google.png";
 
@@ -27,6 +27,7 @@ const GoogleLogin = () => {
   }
   return (
     <div>
+     
       {errorType}
       <button onClick={() => signInWithGoogle()} className="google-signIn">
         <img className="google-icon" src={google} alt="" />

@@ -11,7 +11,7 @@ import Reviews from "../Reviews/Reviews/Reviews";
 const Home = () => {
   return (
     <div className="">
-      <div>
+      <div className="col-md-12 col-sm-12 col-lg-12">
         <Carousel fade>
           <Carousel.Item>
             <img className="d-block w-100" src={caro1} alt="First slide" />

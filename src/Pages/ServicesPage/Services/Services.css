@@ -1,8 +1,3 @@
-.service-area {
-   margin: 40px 0;
-
-}
-
 .service-text {
    margin-bottom: 30px;
    text-align: center;
@@ -14,9 +9,9 @@
 }
 
 
-.services-details-container {
+/* .services-details-container {
    display: grid;
    grid-gap: 10px;
    grid-template-columns: repeat(3, 1fr);
    text-align: center;
-}
+} */

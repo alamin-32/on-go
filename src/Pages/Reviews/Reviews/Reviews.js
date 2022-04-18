@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Review from "../Review/Review";
-import './Reviews.css'
+import "./Reviews.css";
 
 const Reviews = () => {
   const [reviews, setReviews] = useState([]);
@@ -11,9 +11,9 @@ const Reviews = () => {
   }, []);
   return (
     <div className="reviews-area">
-      <h1 className="reviews-text">Client reviews</h1>
+      <h1 className="reviews-text fw-bolder">Client reviews</h1>
       <div className="reviews-container">
-        <div className="reviews-details-container">
+        <div className="reviews-details-container row">
           {reviews.map(review => (
             <Review key={review.id} review={review}></Review>
           ))}

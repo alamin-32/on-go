@@ -8,6 +8,7 @@ import Home from "./Pages/Home/Home";
 import Login from "./Pages/LoginPages/Login/Login";
 import SignUp from "./Pages/LoginPages/SignUp/SignUp";
 import NotFound from "./Pages/NotFound/NotFound";
+import Purchase from "./Pages/Purchase/Purchase";
 import RequiredAuth from "./Pages/RequiredAuth/RequiredAuth";
 import Reviews from "./Pages/Reviews/Reviews/Reviews";
 import Services from "./Pages/ServicesPage/Services/Services";
@@ -20,13 +21,13 @@ function App() {
         <Routes>
           <Route path="/" element={<Home></Home>}></Route>
           <Route path="/home" element={<Home></Home>}></Route>
-          {/* <Route path="/services" element={<Services></Services>}></Route> */}
+          <Route path="/services" element={<Services></Services>}></Route>
 
           <Route
-            path="/services"
+            path="/purchase"
             element={
               <RequiredAuth>
-                <Services></Services>
+                <Purchase></Purchase>
               </RequiredAuth>
             }
           ></Route>
